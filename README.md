@@ -60,34 +60,46 @@ PS C:\> . '.\Remove-Signature.ps1' ; Remove-Signature -Path .\incognito.exe
 ```
 
 ```
-PS C:\Users\david\Desktop\tool> Remove-Signature -Path .\SharpHound.ps1 -AvProduct Amsi
-[*] SharpHound.ps1 has malicious signature. start scanning 1318097 bytes...
-......
-[*] located a signature around 00141cba
+PS C:\> Remove-Signature -Path .\SharpHound.exe -AvProduct Amsi
+[*] SharpHound.exe has malicious signature. start scanning 1051648 bytes...
+.......................
+[*] located a signature around 000ff138
 
-00141c3a 4d 65 74 68 6f 64 28 22 41 74 74 61 63 68 22 2c Method("Attach",
-00141c4a 20 24 42 69 6e 64 69 6e 67 46 6c 61 67 73 29 2e  $BindingFlags).
-00141c5a 49 6e 76 6f 6b 65 28 24 4e 75 6c 6c 2c 20 40 28 Invoke($Null, @(
-00141c6a 29 29 0a 09 24 41 73 73 65 6d 62 6c 79 2e 47 65 ))  $Assembly.Ge
-00141c7a 74 54 79 70 65 28 22 53 68 61 72 70 68 6f 75 6e tType("Sharphoun
-00141c8a 64 2e 50 72 6f 67 72 61 6d 22 29 2e 47 65 74 4d d.Program").GetM
-00141c9a 65 74 68 6f 64 28 22 49 6e 76 6f 6b 65 53 68 61 ethod("InvokeSha
-00141caa 72 70 48 6f 75 6e 64 22 29 2e 49 6e 76 6f 6b 65 rpHound").Invoke
-00141cba 28 24 4e 75 6c 6c 2c 20 40 28 2c 24 70 61 73 73 ($Null, @(,$pass
-00141cca 65 64 29 29 0a 7d 0a
+000ff0b8 00 00 00 00 02 00 00 00 55 00 00 00 e8 0e 10 00     ☻   U   ?►
+000ff0c8 e8 f0 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 ??
+000ff0d8 10 00 00 00 00 00 00 00 00 00 00 00 3d f1 0f 00 ►           =?
+000ff0e8 52 53 44 53 55 3e 33 b3 4e 34 9d 49 8f 3e 78 d5 RSDSU>3?N4?I?>x?
+000ff0f8 88 0c 62 8a 01 00 00 00 44 3a 5c 61 5c 53 68 61 ?
+000ff108 72 70 48 6f 75 6e 64 5c 53 68 61 72 70 48 6f 75 rpHound\SharpHou
+000ff118 6e 64 5c 6f 62 6a 5c 52 65 6c 65 61 73 65 5c 6e nd\obj\Release\n
+000ff128 65 74 34 36 32 5c 53 68 61 72 70 48 6f 75 6e 64 et462\SharpHound
+000ff138 2e 70 64 62 00 00 00 00 68 0f 10 00 00 00 00 00 .pdb    h►
+000ff148 00 00 00 00 7e 0f 10 00 00 20 00 00 00 00 00 00     ~►
+000ff158 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+000ff168 70 0f 10 00 00 00 00 00 00 00 5f 43 6f 72 45 78 p►       _CorEx
+000ff178 65 4d 61 69 6e 00 6d 73 63 6f 72 65 65 2e 64 6c eMain mscoree.dl
+000ff188 6c 00 00 00 00 00 ff 25 00 20 40 00 00 00 00 00 l     ?%  @
+000ff198 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+000ff1a8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 [*] should be changed as follow to bypass the signature
 
-00141c3a 4d 65 74 68 6f 64 28 22 41 74 74 61 63 68 22 2c Method("Attach",
-00141c4a 20 24 42 69 6e 64 69 6e 67 46 6c 61 67 73 29 2e  $BindingFlags).
-00141c5a 49 6e 76 6f 6b 65 28 24 4e 75 6c 6c 2c 20 40 28 Invoke($Null, @(
-00141c6a 29 29 0a 09 24 41 73 73 65 6d 62 6c 79 2e 47 65 ))  $Assembly.Ge
-00141c7a 74 54 79 70 65 28 22 53 68 61 72 70 68 6f 75 6e tType("Sharphoun
-00141c8a 64 2e 50 72 6f 67 72 61 6d 22 29 2e 47 65 74 4d d.Program").GetM
-00141c9a 65 74 68 6f 64 28 22 49 6e 76 6f 6b 65 53 68 61 ethod("InvokeSha
-00141caa 72 70 48 6f 75 6e 64 22 29 2e 49 6e 76 6f 6b 41 rpHound").InvokA
-00141cba 28 24 4e 75 6c 6c 2c 20 40 28 2c 24 70 61 73 73 ($Null, @(,$pass
-00141cca 65 64 29 29 0a 7d 0a
-[+] removed all signatures. here is the output: C:\Users\david\Desktop\tool\bypassed.SharpHound.ps1
+000ff0b8 00 00 00 00 02 00 00 00 55 00 00 00 e8 0e 10 00     ☻   U   ?►
+000ff0c8 e8 f0 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 ??
+000ff0d8 10 00 00 00 00 00 00 00 00 00 00 00 3d f1 0f 00 ►           =?
+000ff0e8 52 53 44 53 55 3e 33 b3 4e 34 9d 49 8f 3e 78 d5 RSDSU>3?N4?I?>x?
+000ff0f8 88 0c 62 8a 01 00 00 00 44 3a 5c 61 5c 53 68 61 ?
+000ff108 72 70 48 6f 75 6e 64 5c 53 68 61 72 70 48 6f 75 rpHound\SharpHou
+000ff118 6e 64 5c 6f 62 6a 5c 52 65 6c 65 61 73 65 5c 6e nd\obj\Release\n
+000ff128 65 74 34 36 32 5c 53 68 61 72 70 48 6f 75 6e 64 et462\SharpHound
+000ff138 41 70 64 62 00 00 00 00 68 0f 10 00 00 00 00 00 Apdb    h►
+000ff148 00 00 00 00 7e 0f 10 00 00 20 00 00 00 00 00 00     ~►
+000ff158 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+000ff168 70 0f 10 00 00 00 00 00 00 00 5f 43 6f 72 45 78 p►       _CorEx
+000ff178 65 4d 61 69 6e 00 6d 73 63 6f 72 65 65 2e 64 6c eMain mscoree.dl
+000ff188 6c 00 00 00 00 00 ff 25 00 20 40 00 00 00 00 00 l     ?%  @
+000ff198 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+000ff1a8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[+] removed all signatures. here is the output: C:\bypassed.SharpHound.exe
 ```
 
 ## Demo
