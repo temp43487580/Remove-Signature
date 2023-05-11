@@ -106,6 +106,11 @@ PS C:\> Remove-Signature -Path .\SharpHound.exe -AvProduct Amsi
 
 [https://www.youtube.com/watch?v=7jtHYQ8kGCw](https://www.youtube.com/watch?v=1pQVQR1jjE8)
 
+## Reference
+
+* https://github.com/matterpreter/DefenderCheck
+* https://github.com/rasta-mouse/ThreatCheck
+
 ## Known Issues
 
 * cannot output bypassed version of mimikats
